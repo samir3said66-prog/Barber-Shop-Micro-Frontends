@@ -484,3 +484,30 @@
     padding: 28px 16px;
   }
 }
+
+/* Keep remote content readable when it shares the shell document. */
+html.dark-theme .services-filters,
+html.dark-theme .details-meta {
+  background-color: var(--color-surface-raised);
+  border-color: var(--color-border);
+}
+
+html.dark-theme .filter-group label,
+html.dark-theme .service-name,
+html.dark-theme .meta-value,
+html.dark-theme .empty-state h3 {
+  color: var(--color-heading);
+}
+
+html.dark-theme .service-description,
+html.dark-theme .service-duration,
+html.dark-theme .details-description,
+html.dark-theme .meta-label,
+html.dark-theme .empty-state p {
+  color: var(--color-muted);
+}
+
+html.dark-theme .service-card {
+  background-color: var(--color-surface-raised);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 24%);
+}

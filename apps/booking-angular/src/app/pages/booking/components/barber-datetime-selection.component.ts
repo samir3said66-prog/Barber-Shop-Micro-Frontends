@@ -85,20 +85,20 @@ import { BookingService } from '../../../services/booking.service';
 
       .barber-card {
         padding: 16px;
-        border: 2px solid #e8ddd4;
+        border: 2px solid var(--color-border-subtle);
         border-radius: 8px;
-        background: white;
+        background: var(--color-surface-raised);
         cursor: pointer;
         transition: all 0.3s ease;
         text-align: left;
 
         &.selected {
-          border-color: #d4645c;
-          background-color: #fef5f3;
+          border-color: var(--color-accent);
+          background-color: var(--color-accent-soft);
         }
 
         &:hover {
-          border-color: #d4645c;
+          border-color: var(--color-accent);
         }
       }
 
@@ -133,7 +133,7 @@ import { BookingService } from '../../../services/booking.service';
 
       .rating {
         font-size: 14px;
-        color: #d4645c;
+        color: var(--color-accent);
         font-weight: 600;
         white-space: nowrap;
       }
@@ -141,13 +141,13 @@ import { BookingService } from '../../../services/booking.service';
       .arabic {
         font-family: 'Cairo', sans-serif;
         font-size: 14px;
-        color: #6f6861;
+        color: var(--color-muted);
         margin: 0;
       }
 
       .specialty {
         font-size: 12px;
-        color: #8b7d76;
+        color: var(--color-muted);
         margin-top: 12px;
       }
 
@@ -163,9 +163,9 @@ import { BookingService } from '../../../services/booking.service';
 
       .time-slot {
         padding: 12px;
-        border: 1px solid #e8ddd4;
+        border: 1px solid var(--color-border-subtle);
         border-radius: 6px;
-        background: white;
+        background: var(--color-surface-raised);
         cursor: pointer;
         transition: all 0.3s ease;
         display: flex;
@@ -173,24 +173,24 @@ import { BookingService } from '../../../services/booking.service';
         gap: 4px;
 
         &.selected {
-          border-color: #d4645c;
-          background-color: #fef5f3;
+          border-color: var(--color-accent);
+          background-color: var(--color-accent-soft);
         }
 
         &:hover:not(:disabled) {
-          border-color: #d4645c;
+          border-color: var(--color-accent);
         }
       }
 
       .date {
         font-size: 12px;
-        color: #8b7d76;
+        color: var(--color-muted);
       }
 
       .time {
         font-size: 14px;
         font-weight: 600;
-        color: #211e1b;
+        color: var(--color-heading);
       }
 
       .actions {

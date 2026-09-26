@@ -83,8 +83,8 @@ import { BookingService } from '../../../services/booking.service';
         height: 80px;
         margin: 0 auto 24px;
         border-radius: 50%;
-        background-color: #4caf50;
-        color: white;
+        background-color: var(--color-success);
+        color: var(--color-on-accent);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -103,12 +103,12 @@ import { BookingService } from '../../../services/booking.service';
       }
 
       h2 {
-        color: #4caf50;
+        color: var(--color-success-text);
         margin-bottom: 32px;
       }
 
       .confirmation-details {
-        background-color: #fef5f3;
+        background-color: var(--color-accent-soft);
         border-radius: 8px;
         padding: 24px;
         margin-bottom: 32px;
@@ -118,7 +118,7 @@ import { BookingService } from '../../../services/booking.service';
       .detail-section {
         margin-bottom: 20px;
         padding-bottom: 20px;
-        border-bottom: 1px solid #e8ddd4;
+        border-bottom: 1px solid var(--color-border-subtle);
 
         &:last-child {
           margin-bottom: 0;
@@ -130,27 +130,27 @@ import { BookingService } from '../../../services/booking.service';
       .detail-section h3 {
         font-size: 12px;
         text-transform: uppercase;
-        color: #8b7d76;
+        color: var(--color-muted);
         margin-bottom: 8px;
         font-weight: 600;
       }
 
       .detail-section p {
         font-size: 16px;
-        color: #211e1b;
+        color: var(--color-heading);
       }
 
       .arabic {
         font-family: 'Cairo', sans-serif;
         font-size: 14px;
-        color: #6f6861;
+        color: var(--color-muted);
         margin-top: 4px;
       }
 
       .confirmation-code {
         font-size: 20px;
         font-weight: 700;
-        color: #d4645c;
+        color: var(--color-accent);
         font-family: 'Courier New', monospace;
         overflow-wrap: anywhere;
       }
@@ -158,7 +158,7 @@ import { BookingService } from '../../../services/booking.service';
       .price {
         font-size: 18px;
         font-weight: 700;
-        color: #d4645c;
+        color: var(--color-accent);
       }
 
       .actions {

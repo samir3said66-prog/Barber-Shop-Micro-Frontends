@@ -389,7 +389,7 @@
   align-items: center;
   background-color: var(--color-accent);
   border-radius: var(--radius-button);
-  color: var(--color-white);
+  color: var(--color-on-accent);
   display: inline-flex;
   font-weight: 600;
   justify-content: center;
@@ -402,7 +402,7 @@
 .shell-cta:hover {
   background-color: var(--color-accent-hover);
   box-shadow: 0 5px 14px rgb(182 106 60 / 24%);
-  color: var(--color-white);
+  color: var(--color-on-accent);
   transform: translateY(-1px);
 }
 
@@ -500,7 +500,7 @@
   align-items: center;
   background-color: var(--color-primary-dark);
   border-radius: var(--radius-button);
-  color: var(--color-background);
+  color: var(--color-sand);
   display: inline-flex;
   font-size: 16px;
   font-weight: 600;
@@ -513,7 +513,7 @@
 
 .shell-cta-large:hover {
   background-color: var(--color-surface);
-  color: var(--color-background);
+  color: var(--color-sand);
   transform: translateY(-1px);
 }
 
@@ -1503,4 +1503,46 @@ html.dark-theme .contact-form-wrap { background-color: #2a2522; }
   margin-top: 16px;
   display: flex;
   gap: 12px;
+}
+
+/* Theme-safe page surfaces and text */
+html.dark-theme .section h2,
+html.dark-theme .about-text h2,
+html.dark-theme .barber-profile-body h3,
+html.dark-theme .contact-form h3 {
+  color: var(--color-heading);
+}
+
+html.dark-theme .section-description,
+html.dark-theme .feature p,
+html.dark-theme .booking-cta p,
+html.dark-theme .not-found-content p,
+html.dark-theme .barber-rating span,
+html.dark-theme .barber-exp,
+html.dark-theme .barber-spec,
+html.dark-theme .contact-info-item p,
+html.dark-theme .contact-success p,
+html.dark-theme .booking-id,
+html.dark-theme .booking-row {
+  color: var(--color-muted);
+}
+
+html.dark-theme .feature,
+html.dark-theme .barber-profile-card,
+html.dark-theme .booking-card,
+html.dark-theme .contact-form-wrap {
+  background-color: var(--color-surface-raised);
+  color: var(--color-text);
+}
+
+html.dark-theme .booking-row strong {
+  color: var(--color-accent);
+}
+
+html.dark-theme .about-stats-section {
+  background-color: var(--color-primary-dark);
+}
+
+html.dark-theme .legal-copy {
+  color: var(--color-muted);
 }

@@ -144,12 +144,12 @@ import { BookingService } from '../../../services/booking.service';
       label {
         font-size: 14px;
         font-weight: 600;
-        color: #211e1b;
+        color: var(--color-heading);
       }
 
       .error-message {
         font-size: 12px;
-        color: #d4645c;
+        color: var(--color-accent);
       }
 
       .actions {

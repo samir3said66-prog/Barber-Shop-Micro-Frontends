@@ -36,7 +36,7 @@
 
 .ui-button--primary {
   background-color: var(--color-accent);
-  color: var(--color-white);
+  color: var(--color-on-accent);
 }
 
 .ui-button--primary:hover:not(:disabled) {
@@ -46,7 +46,7 @@
 
 .ui-button--secondary {
   background-color: var(--color-border-subtle);
-  color: var(--color-primary-dark);
+  color: var(--color-heading);
 }
 
 .ui-button--secondary:hover:not(:disabled) {
@@ -187,5 +187,5 @@ html.dark-theme .ui-textarea {
 
 html.dark-theme .ui-button--secondary {
   background-color: var(--color-border);
-  color: var(--color-sand);
+  color: var(--color-heading);
 }
