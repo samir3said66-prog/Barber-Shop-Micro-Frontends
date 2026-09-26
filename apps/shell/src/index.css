@@ -1,43 +1,6 @@
 @import '@design-tokens/core/css';
 
 /* ============================================
-   Modern Scrollbar
-   ============================================ */
-:root {
-  --scrollbar-thumb: rgba(182, 106, 60, 0.68);
-  --scrollbar-thumb-hover: #b66a3c;
-  scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-thumb) transparent;
-}
-
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-thumb) transparent;
-}
-
-*::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-*::-webkit-scrollbar-track,
-*::-webkit-scrollbar-corner {
-  background: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb);
-  border: 2px solid transparent;
-  border-radius: 999px;
-  background-clip: padding-box;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-hover);
-  border-width: 1px;
-}
-
-/* ============================================
    Layout Structure
    ============================================ */
 .layout {
@@ -58,7 +21,7 @@
   background: transparent;
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
-  color: #ffffff;
+  color: var(--color-white);
   padding: 14px 16px;
   position: sticky;
   top: 0;
@@ -77,15 +40,15 @@
   min-height: 56px;
   position: relative;
   pointer-events: auto;
-  border: 1px solid rgba(231, 216, 197, 0.13);
-  border-radius: 24px;
-  background: rgba(23, 20, 18, 0.94);
+  border: 1px solid rgb(231 216 197 / 13%);
+  border-radius: var(--radius-hero);
+  background: rgb(23 20 18 / 94%);
   box-shadow: 0 16px 40px rgba(23, 20, 18, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.06);
   transition: border-color 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
 }
 
 .header-container:hover {
-  border-color: rgba(231, 216, 197, 0.22);
+  border-color: rgb(231 216 197 / 22%);
   box-shadow: 0 18px 44px rgba(23, 20, 18, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
@@ -173,8 +136,8 @@
 
 .nav-link:hover,
 .nav-link:focus-visible {
-  color: #ffffff;
-  background: rgba(182, 106, 60, 0.2);
+  color: var(--color-white);
+  background: rgb(182 106 60 / 20%);
   opacity: 1;
   transform: translateY(-1px);
   outline: none;
@@ -187,8 +150,8 @@
 }
 
 .nav-link.active {
-  color: #ffffff;
-  background: #b66a3c;
+  color: var(--color-white);
+  background: var(--color-accent);
   box-shadow: 0 5px 14px rgba(182, 106, 60, 0.25);
   opacity: 1;
 }
@@ -229,16 +192,16 @@
 .header-icon-btn:focus-visible,
 .theme-toggle:hover,
 .theme-toggle:focus-visible {
-  background: rgba(182, 106, 60, 0.2);
-  color: #ffffff;
+  background: rgb(182 106 60 / 20%);
+  color: var(--color-white);
   opacity: 1;
   transform: translateY(-1px);
 }
 
 .lang-toggle {
-  background-color: #b66a3c;
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: 1px solid rgb(255 255 255 / 12%);
   border-radius: 999px;
   min-width: 44px;
   height: 38px;
@@ -250,7 +213,7 @@
 }
 
 .lang-toggle:hover {
-  background-color: #c97f4f;
+  background-color: var(--color-accent-hover);
   box-shadow: 0 5px 14px rgba(182, 106, 60, 0.3);
   transform: translateY(-1px);
 }
@@ -270,8 +233,8 @@
 
 .menu-toggle:hover,
 .menu-toggle:focus-visible {
-  background: rgba(182, 106, 60, 0.2);
-  border-color: rgba(231, 216, 197, 0.3);
+  background: rgb(182 106 60 / 20%);
+  border-color: rgb(231 216 197 / 30%);
   transform: rotate(4deg);
   outline: none;
 }
@@ -282,7 +245,7 @@
   height: 2px;
   margin: 4px auto;
   border-radius: 999px;
-  background: #ffffff;
+  background: var(--color-white);
   transition: transform 220ms ease, opacity 220ms ease;
 }
 
@@ -314,8 +277,8 @@
    Footer
    ============================================ */
 .footer {
-  background-color: #29231f;
-  color: #e7d8c5;
+  background-color: var(--color-surface);
+  color: var(--color-sand);
   padding: 48px 0 24px;
   margin-top: auto;
 }
@@ -333,7 +296,7 @@
 .footer-section h4 {
   font-family: 'Cairo', sans-serif;
   font-size: 16px;
-  color: #b66a3c;
+  color: var(--color-accent);
   margin-bottom: 16px;
 }
 
@@ -355,7 +318,7 @@
 }
 
 .footer-section a:hover {
-  color: #b66a3c;
+  color: var(--color-accent);
 }
 
 .footer-title {
@@ -385,7 +348,7 @@
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(182, 106, 60, 0.2);
+  border-top: 1px solid rgb(182 106 60 / 20%);
   padding-top: 24px;
   text-align: center;
   font-size: 13px;

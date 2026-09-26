@@ -1,5 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Tajawal:wght@300;400;500;600;700&display=swap');
 
+:root {
+  --color-primary-dark: #171412;
+  --color-primary: #211e1b;
+  --color-surface: #29231f;
+  --color-accent: #b66a3c;
+  --color-accent-hover: #c97f4f;
+  --color-sand: #e7d8c5;
+  --color-background: #f8f5f0;
+  --color-background-dark: #1a1614;
+  --color-surface-raised: #ffffff;
+  --color-surface-dark: #2a2522;
+  --color-text: #211e1b;
+  --color-muted: #6f6861;
+  --color-border: #d9cfc5;
+  --color-border-subtle: #e7d8c5;
+  --color-success: #10b981;
+  --color-success-surface: #f0fdf4;
+  --color-success-border: #bbf7d0;
+  --color-error: #ef4444;
+  --color-danger: #dc2626;
+  --color-danger-strong: #991b1b;
+  --color-warning: #f59e0b;
+  --color-info: #3b82f6;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --radius-small: 8px;
+  --radius-input: 10px;
+  --radius-button: 10px;
+  --radius-card: 12px;
+  --radius-modal: 16px;
+  --radius-hero: 24px;
+  --radius-full: 9999px;
+  --scrollbar-thumb: rgba(182, 106, 60, 0.68);
+  --scrollbar-thumb-hover: var(--color-accent);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,12 +44,14 @@
 
 html {
   font-size: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
 }
 
 body {
   font-family: 'Tajawal', sans-serif;
-  background-color: #f8f5f0;
-  color: #211e1b;
+  background-color: var(--color-background);
+  color: var(--color-text);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,27 +60,40 @@ body {
 
 /* Scrollbar Customization */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f8f5f0;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #b66a3c;
-  border-radius: 5px;
+  background: var(--scrollbar-thumb);
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background-clip: padding-box;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #c97f4f;
+  background: var(--scrollbar-thumb-hover);
+  border-width: 1px;
 }
 
 /* Dark Theme Overrides */
 html.dark-theme body {
-  background-color: #1a1614;
-  color: #f8f5f0;
+  background-color: var(--color-background-dark);
+  color: var(--color-sand);
 }
+
+html.dark-theme {
+  --color-text: #f8f5f0;
+  --color-muted: #a39c96;
+  --color-border: #332d29;
+  --color-border-subtle: #3f3630;
+  --scrollbar-thumb: rgba(201, 127, 79, 0.7);
+  --scrollbar-thumb-hover: var(--color-accent-hover);
+}
+
 html.dark-theme ::-webkit-scrollbar-track {
-  background: #1a1614;
+  background: transparent;
 }
 
 h1, h2, h3, h4, h5, h6 {
