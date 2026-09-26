@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLanguage } from '../providers/LanguageProvider';
 
 interface NavLink {
@@ -25,6 +25,21 @@ export function Header(): JSX.Element {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const closeMenu = (): void => setIsMenuOpen(false);
+
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return undefined;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent): void => {
+      if (event.key === 'Escape') {
+        closeMenu();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isMenuOpen]);
 
   return (
     <header className="header" dir={isArabic ? 'rtl' : 'ltr'}>

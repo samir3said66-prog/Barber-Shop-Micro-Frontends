@@ -30,14 +30,24 @@ export const colors = {
   brown: '#211E1B', // Primary text
   surface: '#29231F', // Surface elevation
   accent: '#B66A3C', // Warm terracotta accent
+  accentHover: '#C97F4F', // Accent hover state
   sand: '#E7D8C5', // Warm beige
   background: '#F8F5F0', // Off-white background
+  backgroundDark: '#1A1614', // Dark page background
+  surfaceRaised: '#FFFFFF', // Raised light surface
+  surfaceDark: '#2A2522', // Raised dark surface
   text: '#211E1B', // Primary text
   muted: '#6F6861', // Secondary text, disabled
+  border: '#D9CFC5', // Default border
+  borderSubtle: '#E7D8C5', // Low-contrast border
 
   // Status Colors
   success: '#10B981', // Green
+  successSurface: '#F0FDF4',
+  successBorder: '#BBF7D0',
   error: '#EF4444', // Red
+  danger: '#DC2626', // Strong application error state
+  dangerStrong: '#991B1B',
   warning: '#F59E0B', // Amber
   info: '#3B82F6', // Blue
 
@@ -70,12 +80,22 @@ export const colorVariables = {
   '--color-primary': colors.brown,
   '--color-surface': colors.surface,
   '--color-accent': colors.accent,
+  '--color-accent-hover': colors.accentHover,
   '--color-sand': colors.sand,
   '--color-background': colors.background,
+  '--color-background-dark': colors.backgroundDark,
+  '--color-surface-raised': colors.surfaceRaised,
+  '--color-surface-dark': colors.surfaceDark,
   '--color-text': colors.text,
   '--color-muted': colors.muted,
+  '--color-border': colors.border,
+  '--color-border-subtle': colors.borderSubtle,
   '--color-success': colors.success,
+  '--color-success-surface': colors.successSurface,
+  '--color-success-border': colors.successBorder,
   '--color-error': colors.error,
+  '--color-danger': colors.danger,
+  '--color-danger-strong': colors.dangerStrong,
   '--color-warning': colors.warning,
   '--color-info': colors.info,
   '--color-white': colors.white,

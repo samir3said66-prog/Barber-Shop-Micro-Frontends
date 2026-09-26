@@ -149,6 +149,9 @@ import { BookingService } from '../../../services/booking.service';
 
       .form-input,
       .form-textarea {
+         width: 100%;
+         max-width: 100%;
+         min-width: 0;
         padding: 12px;
         border: 1px solid #e8ddd4;
         border-radius: 6px;

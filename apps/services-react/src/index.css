@@ -1,40 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Tajawal:wght@300;400;500;600;700&display=swap');
-
-/* ============================================
-   Services Microfrontend Base
-   ============================================ */
-
-/* === Global Reset (when running standalone) === */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-:root {
-  --scrollbar-thumb: rgba(182, 106, 60, 0.68);
-  --scrollbar-thumb-hover: #b66a3c;
-  scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-thumb) transparent;
-}
-* { scrollbar-width: thin; scrollbar-color: var(--scrollbar-thumb) transparent; }
-*::-webkit-scrollbar { width: 8px; height: 8px; }
-*::-webkit-scrollbar-track,
-*::-webkit-scrollbar-corner { background: transparent; }
-*::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb);
-  border: 2px solid transparent;
-  border-radius: 999px;
-  background-clip: padding-box;
-}
-*::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-hover);
-  border-width: 1px;
-}
-html { font-size: 16px; }
-body { font-family: 'Tajawal', sans-serif; background-color: #f8f5f0; color: #211e1b; line-height: 1.5; -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease; }
-h1, h2, h3, h4, h5, h6 { font-family: 'Cairo', sans-serif; font-weight: 700; line-height: 1.2; }
-html.dark-theme body { background-color: #1a1614; color: #f8f5f0; }
-html.dark-theme {
-  --scrollbar-thumb: rgba(201, 127, 79, 0.7);
-  --scrollbar-thumb-hover: #c97f4f;
-  scrollbar-color: var(--scrollbar-thumb) transparent;
-}
+@import '@design-tokens/core/css';
 
 /* ============================================
    Services Container
@@ -49,8 +13,8 @@ html.dark-theme {
    ============================================ */
 .services-header {
   padding: 40px 24px;
-  background: linear-gradient(135deg, #171412 0%, #29231f 100%);
-  color: #f8f5f0;
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-surface) 100%);
+  color: var(--color-background);
 }
 
 .services-header h1 {
@@ -65,8 +29,8 @@ html.dark-theme {
 
 .services-filters {
   padding: 24px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e7d8c5;
+  background-color: var(--color-surface-raised);
+  border-bottom: 1px solid var(--color-border-subtle);
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
@@ -81,24 +45,24 @@ html.dark-theme {
 
 .filter-group label {
   font-weight: 500;
-  color: #171412;
+  color: var(--color-primary-dark);
 }
 
 .filter-group select,
 .filter-group input {
   padding: 8px 12px;
-  border: 1px solid #d9cfc5;
-  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
   font-family: inherit;
   font-size: 14px;
-  background-color: #f8f5f0;
+  background-color: var(--color-background);
 }
 
 .filter-group select:focus,
 .filter-group input:focus {
   outline: none;
-  border-color: #b66a3c;
-  box-shadow: 0 0 0 3px rgba(182, 106, 60, 0.1);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgb(182 106 60 / 10%);
 }
 
 .services-grid {
@@ -112,8 +76,8 @@ html.dark-theme {
 }
 
 .service-card {
-  background-color: #ffffff;
-  border-radius: 12px;
+  background-color: var(--color-surface-raised);
+  border-radius: var(--radius-card);
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: box-shadow 200ms, transform 200ms;
@@ -128,12 +92,12 @@ html.dark-theme {
 .service-image {
   width: 100%;
   height: 200px;
-  background-color: #e7d8c5;
+  background-color: var(--color-border-subtle);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 48px;
-  color: #b66a3c;
+  color: var(--color-accent);
 }
 
 .service-content {
@@ -142,7 +106,7 @@ html.dark-theme {
 
 .service-category {
   font-size: 12px;
-  color: #b66a3c;
+  color: var(--color-accent);
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -152,12 +116,12 @@ html.dark-theme {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #171412;
+  color: var(--color-primary-dark);
 }
 
 .service-description {
   font-size: 14px;
-  color: #6f6861;
+  color: var(--color-muted);
   margin-bottom: 16px;
   line-height: 1.5;
   display: -webkit-box;
@@ -171,14 +135,14 @@ html.dark-theme {
   justify-content: space-between;
   align-items: baseline;
   padding-top: 12px;
-  border-top: 1px solid #e7d8c5;
+  border-top: 1px solid var(--color-border-subtle);
   margin-bottom: 12px;
 }
 
 .service-price {
   font-size: 20px;
   font-weight: 700;
-  color: #b66a3c;
+  color: var(--color-accent);
 }
 
 .service-currency {
@@ -187,13 +151,13 @@ html.dark-theme {
 
 .service-duration {
   font-size: 13px;
-  color: #6f6861;
+  color: var(--color-muted);
 }
 
 .service-badge {
   display: inline-block;
   background-color: #fef2f2;
-  color: #dc2626;
+  color: var(--color-danger);
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 12px;
@@ -207,8 +171,8 @@ html.dark-theme {
 
 .cta-button {
   width: 100%;
-  background-color: #b66a3c;
-  color: #ffffff;
+  background-color: var(--color-accent);
+  color: var(--color-white);
   border: none;
   border-radius: 8px;
   padding: 10px 16px;
@@ -219,7 +183,7 @@ html.dark-theme {
 }
 
 .cta-button:hover {
-  background-color: #c97f4f;
+  background-color: var(--color-accent-hover);
 }
 
 .cta-button:active {
@@ -245,13 +209,13 @@ html.dark-theme {
 .details-image {
   width: 100%;
   height: 400px;
-  background-color: #e7d8c5;
+  background-color: var(--color-border-subtle);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 80px;
-  color: #b66a3c;
+  color: var(--color-accent);
 }
 
 .details-info h1 {
@@ -261,7 +225,7 @@ html.dark-theme {
 
 .details-category {
   font-size: 14px;
-  color: #b66a3c;
+  color: var(--color-accent);
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -269,7 +233,7 @@ html.dark-theme {
 
 .details-description {
   font-size: 16px;
-  color: #6f6861;
+  color: var(--color-muted);
   line-height: 1.7;
   margin-bottom: 24px;
 }
@@ -279,7 +243,7 @@ html.dark-theme {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   padding: 20px;
-  background-color: #f8f5f0;
+  background-color: var(--color-background);
   border-radius: 8px;
   margin-bottom: 24px;
 }
@@ -292,19 +256,19 @@ html.dark-theme {
 
 .meta-label {
   font-size: 12px;
-  color: #6f6861;
+  color: var(--color-muted);
   font-weight: 600;
 }
 
 .meta-value {
   font-size: 18px;
   font-weight: 700;
-  color: #171412;
+  color: var(--color-primary-dark);
 }
 
 .details-cta {
-  background-color: #b66a3c;
-  color: white;
+  background-color: var(--color-accent);
+  color: var(--color-white);
   padding: 16px 32px;
   border-radius: 8px;
   text-decoration: none;
@@ -314,7 +278,7 @@ html.dark-theme {
 }
 
 .details-cta:hover {
-  background-color: #c97f4f;
+  background-color: var(--color-accent-hover);
 }
 
 /* ============================================
@@ -428,8 +392,8 @@ html.dark-theme {
 .spinner {
   width: 32px;
   height: 32px;
-  border: 4px solid #e7d8c5;
-  border-top-color: #b66a3c;
+  border: 4px solid var(--color-border-subtle);
+  border-top-color: var(--color-accent);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -452,11 +416,11 @@ html.dark-theme {
 }
 
 .empty-state h3 {
-  color: #171412;
+  color: var(--color-primary-dark);
 }
 
 .empty-state p {
-  color: #6f6861;
+  color: var(--color-muted);
   font-size: 14px;
 }
 
@@ -464,8 +428,16 @@ html.dark-theme {
    Responsive Design
    ============================================ */
 @media (max-width: 768px) {
+  .services-header {
+    padding: 32px 20px;
+  }
+
   .services-header h1 {
     font-size: 28px;
+  }
+
+  .service-details {
+    padding: 32px 20px;
   }
 
   .details-header {
@@ -474,7 +446,7 @@ html.dark-theme {
   }
 
   .details-image {
-    height: 300px;
+    height: min(300px, 62vw);
     font-size: 60px;
   }
 
@@ -491,15 +463,22 @@ html.dark-theme {
 @media (max-width: 480px) {
   .services-filters {
     flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding: 18px 16px;
   }
 
   .filter-group {
     width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
   }
 
   .filter-group select,
   .filter-group input {
     width: 100%;
+    min-width: 0;
   }
 
   .services-grid {
@@ -508,11 +487,44 @@ html.dark-theme {
   }
 
   .service-image {
-    height: 150px;
+    height: 42vw;
+    min-height: 140px;
     font-size: 32px;
+  }
+
+  .service-content {
+    padding: 16px;
+  }
+
+  .service-name {
+    font-size: 17px;
   }
 
   .details-meta {
     grid-template-columns: 1fr;
+  }
+
+  .service-details {
+    padding: 24px 16px;
+  }
+
+  .details-image {
+    height: 56vw;
+    min-height: 190px;
+    font-size: 48px;
+  }
+
+  .details-info h1 {
+    font-size: 28px;
+  }
+
+  .details-cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .offers-section {
+    padding: 28px 16px;
   }
 }

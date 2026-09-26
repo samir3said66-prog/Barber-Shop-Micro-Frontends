@@ -1,40 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Tajawal:wght@300;400;500;600;700&display=swap');
-
-/* ============================================
-   Booking Microfrontend Base
-   ============================================ */
-
-/* === Global Reset (when running standalone) === */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-:root {
-  --scrollbar-thumb: rgba(182, 106, 60, 0.68);
-  --scrollbar-thumb-hover: #b66a3c;
-  scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-thumb) transparent;
-}
-* { scrollbar-width: thin; scrollbar-color: var(--scrollbar-thumb) transparent; }
-*::-webkit-scrollbar { width: 8px; height: 8px; }
-*::-webkit-scrollbar-track,
-*::-webkit-scrollbar-corner { background: transparent; }
-*::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb);
-  border: 2px solid transparent;
-  border-radius: 999px;
-  background-clip: padding-box;
-}
-*::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-hover);
-  border-width: 1px;
-}
-html { font-size: 16px; }
-body { font-family: 'Tajawal', sans-serif; background-color: #f8f5f0; color: #211e1b; line-height: 1.5; -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease; }
-h1, h2, h3, h4, h5, h6 { font-family: 'Cairo', sans-serif; font-weight: 700; line-height: 1.2; }
-html.dark-theme body { background-color: #1a1614; color: #f8f5f0; }
-html.dark-theme {
-  --scrollbar-thumb: rgba(201, 127, 79, 0.7);
-  --scrollbar-thumb-hover: #c97f4f;
-  scrollbar-color: var(--scrollbar-thumb) transparent;
-}
+@import '@design-tokens/core/css';
 
 /* ============================================
    Booking Container
@@ -46,6 +10,7 @@ app-root {
 
 .booking-container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 40px 24px;
 }
@@ -65,7 +30,7 @@ app-root {
 
 .booking-header p {
   font-size: 16px;
-  color: #6f6861;
+  color: var(--color-muted);
 }
 
 /* Progress Indicator */
@@ -84,7 +49,7 @@ app-root {
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #e7d8c5;
+  background-color: var(--color-border-subtle);
   z-index: -1;
 }
 
@@ -101,34 +66,35 @@ app-root {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #e7d8c5;
-  color: #6f6861;
+  background-color: var(--color-border-subtle);
+  color: var(--color-muted);
   font-weight: 700;
   margin-bottom: 8px;
 }
 
 .progress-step.active .progress-step-number {
-  background-color: #b66a3c;
-  color: white;
+  background-color: var(--color-accent);
+  color: var(--color-white);
 }
 
 .progress-step.completed .progress-step-number {
-  background-color: #10b981;
-  color: white;
+  background-color: var(--color-success);
+  color: var(--color-white);
 }
 
 .progress-step-label {
   font-size: 12px;
-  color: #6f6861;
+  color: var(--color-muted);
   font-weight: 500;
 }
 
 /* Form Container */
 .booking-form {
-  background-color: white;
-  border-radius: 12px;
+  background-color: var(--color-surface-raised);
+  border-radius: var(--radius-card);
   padding: 32px 24px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  min-width: 0;
 }
 
 /* Form Groups */
@@ -140,25 +106,25 @@ app-root {
   display: block;
   font-weight: 500;
   margin-bottom: 8px;
-  color: #171412;
+  color: var(--color-primary-dark);
 }
 
 .form-group input,
 .form-group select {
   width: 100%;
   padding: 12px;
-  border: 1px solid #d9cfc5;
-  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
   font-family: inherit;
   font-size: 14px;
-  background-color: #f8f5f0;
+  background-color: var(--color-background);
 }
 
 .form-group input:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #b66a3c;
-  box-shadow: 0 0 0 3px rgba(182, 106, 60, 0.1);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgb(182 106 60 / 10%);
 }
 
 .form-group.error input,
@@ -167,7 +133,7 @@ app-root {
 }
 
 .form-group-error {
-  color: #dc2626;
+  color: var(--color-danger);
   font-size: 12px;
   margin-top: 4px;
 }
@@ -195,20 +161,20 @@ app-root {
 
 .selection-card {
   padding: 16px;
-  border: 2px solid #e7d8c5;
-  border-radius: 8px;
+  border: 2px solid var(--color-border-subtle);
+  border-radius: var(--radius-small);
   cursor: pointer;
   transition: all 200ms;
   text-align: center;
-  background-color: #f8f5f0;
+  background-color: var(--color-background);
 }
 
 .selection-card:hover {
-  border-color: #b66a3c;
+  border-color: var(--color-accent);
 }
 
 .selection-card.selected {
-  border-color: #b66a3c;
+  border-color: var(--color-accent);
   background-color: #fef3c7;
 }
 
@@ -219,7 +185,7 @@ app-root {
 
 .selection-card p {
   font-size: 12px;
-  color: #6f6861;
+  color: var(--color-muted);
 }
 
 /* Buttons */
@@ -242,26 +208,26 @@ button {
 }
 
 .btn-primary {
-  background-color: #b66a3c;
-  color: white;
+  background-color: var(--color-accent);
+  color: var(--color-white);
 }
 
 .btn-primary:hover {
-  background-color: #c97f4f;
+  background-color: var(--color-accent-hover);
 }
 
 .btn-primary:disabled {
-  background-color: #d9cfc5;
+  background-color: var(--color-border);
   cursor: not-allowed;
 }
 
 .btn-secondary {
-  background-color: #e7d8c5;
-  color: #171412;
+  background-color: var(--color-border-subtle);
+  color: var(--color-primary-dark);
 }
 
 .btn-secondary:hover {
-  background-color: #d9cfc5;
+  background-color: var(--color-border);
 }
 
 /* ============================================
@@ -279,17 +245,18 @@ button {
 
 .confirmation-page h2 {
   font-size: 32px;
-  color: #10b981;
+  color: var(--color-success);
   margin-bottom: 16px;
 }
 
 .booking-summary {
-  background-color: #f0fdf4;
-  border: 1px solid #bbf7d0;
+  background-color: var(--color-success-surface);
+  border: 1px solid var(--color-success-border);
   border-radius: 12px;
   padding: 24px;
   margin: 32px auto;
   max-width: 500px;
+  width: 100%;
   text-align: left;
 }
 
@@ -301,8 +268,15 @@ button {
 .booking-detail {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
   padding: 8px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-text) 5%, transparent);
+}
+
+.booking-detail > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .booking-detail:last-child {
@@ -353,38 +327,83 @@ button {
   }
 }
 
+@media (max-width: 480px) {
+  .booking-container {
+    padding: 20px 12px;
+  }
+
+  .booking-header {
+    margin-bottom: 28px;
+  }
+
+  .booking-header h1 {
+    font-size: 26px;
+  }
+
+  .booking-header p {
+    font-size: 14px;
+  }
+
+  .booking-progress {
+    margin-bottom: 28px;
+    gap: 4px;
+  }
+
+  .booking-form {
+    padding: 20px 12px;
+    border-radius: 10px;
+  }
+
+  .booking-summary {
+    padding: 16px;
+    margin-block: 24px;
+  }
+
+  .booking-detail {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .booking-reference {
+    padding: 12px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+}
+
 /* ============================================
    Dark Theme Overrides
    ============================================ */
 html.dark-theme .booking-form,
 html.dark-theme .selection-card {
-  background-color: #2a2522;
-  border-color: #332d29;
+  background-color: var(--color-surface-dark);
+  border-color: var(--color-border);
 }
 html.dark-theme .form-group label,
 html.dark-theme .booking-header h1,
 html.dark-theme .booking-summary h3 {
-  color: #e7d8c5;
+  color: var(--color-sand);
 }
 html.dark-theme .form-group input,
 html.dark-theme .form-group select {
-  background-color: #0d0b0a;
-  color: #e7d8c5;
-  border-color: #332d29;
+  background-color: var(--color-primary-dark);
+  color: var(--color-sand);
+  border-color: var(--color-border);
 }
 html.dark-theme .selection-card {
-  background-color: #1a1614;
+  background-color: var(--color-background-dark);
 }
 html.dark-theme .selection-card:hover {
-  border-color: #b66a3c;
+  border-color: var(--color-accent);
 }
 html.dark-theme .selection-card.selected {
   background-color: #3f2a1d;
-  border-color: #b66a3c;
+  border-color: var(--color-accent);
 }
 html.dark-theme .btn-secondary {
-  background-color: #332d29;
-  color: #e7d8c5;
+  background-color: var(--color-border);
+  color: var(--color-sand);
 }
 html.dark-theme .booking-summary {
   background-color: #1f2937;
