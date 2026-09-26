@@ -605,6 +605,7 @@
   .menu-toggle {
     display: block;
     order: 3;
+    margin-inline-start: 0;
   }
 
   .nav {
