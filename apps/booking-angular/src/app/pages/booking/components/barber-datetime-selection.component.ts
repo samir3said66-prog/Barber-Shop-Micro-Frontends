@@ -114,10 +114,15 @@ import { BookingService } from '../../../services/booking.service';
         font-size: 16px;
       }
 
+      .barber-header > div {
+        min-width: 0;
+      }
+
       .rating {
         font-size: 14px;
         color: #d4645c;
         font-weight: 600;
+        white-space: nowrap;
       }
 
       .arabic {

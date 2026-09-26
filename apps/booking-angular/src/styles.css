@@ -46,6 +46,7 @@ app-root {
 
 .booking-container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 40px 24px;
 }
@@ -129,6 +130,7 @@ app-root {
   border-radius: 12px;
   padding: 32px 24px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  min-width: 0;
 }
 
 /* Form Groups */
@@ -290,6 +292,7 @@ button {
   padding: 24px;
   margin: 32px auto;
   max-width: 500px;
+  width: 100%;
   text-align: left;
 }
 
@@ -301,8 +304,15 @@ button {
 .booking-detail {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
   padding: 8px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.booking-detail > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .booking-detail:last-child {
@@ -350,6 +360,51 @@ button {
 
   button {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-container {
+    padding: 20px 12px;
+  }
+
+  .booking-header {
+    margin-bottom: 28px;
+  }
+
+  .booking-header h1 {
+    font-size: 26px;
+  }
+
+  .booking-header p {
+    font-size: 14px;
+  }
+
+  .booking-progress {
+    margin-bottom: 28px;
+    gap: 4px;
+  }
+
+  .booking-form {
+    padding: 20px 12px;
+    border-radius: 10px;
+  }
+
+  .booking-summary {
+    padding: 16px;
+    margin-block: 24px;
+  }
+
+  .booking-detail {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .booking-reference {
+    padding: 12px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
   }
 }
 

@@ -152,6 +152,7 @@ import { BookingService } from '../../../services/booking.service';
         font-weight: 700;
         color: #d4645c;
         font-family: 'Courier New', monospace;
+        overflow-wrap: anywhere;
       }
 
       .price {

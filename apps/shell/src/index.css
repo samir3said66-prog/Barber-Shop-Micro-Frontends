@@ -750,6 +750,77 @@
   }
 }
 
+/* ============================================
+   Responsive safeguards for page content
+   ============================================ */
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+  .section,
+  .page-hero,
+  .footer-container {
+    min-width: 0;
+  }
+
+  .contact-form-wrap {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .barbers-grid,
+  .gallery-grid,
+  .offers-grid-page {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-card {
+    padding: 16px;
+  }
+
+  .booking-card-header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .booking-row {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding-inline: 12px;
+  }
+
+  .cta-button-large {
+    width: 100%;
+    max-width: 320px;
+    padding-inline: 24px;
+  }
+
+  .contact-form-wrap {
+    padding: 20px 16px;
+  }
+
+  .contact-info-item p {
+    overflow-wrap: anywhere;
+  }
+
+  .offer-card-page {
+    padding: 20px;
+  }
+
+  .offer-code-box {
+    flex-wrap: wrap;
+  }
+}
+
 
 /* ============================================
    Error & Loading States
