@@ -53,14 +53,14 @@ import { BookingService } from '../../../services/booking.service';
         </div>
 
         <div class="actions">
-          <button (click)="newBooking()" class="btn-primary" type="button">
+          <button (click)="newBooking()" class="ui-button ui-button--primary" type="button">
             Make Another Booking
           </button>
         </div>
       </div>
 
-      <div *ngIf="isSubmitting" class="submitting">
-        <div class="spinner"></div>
+      <div *ngIf="isSubmitting" class="ui-loading-state submitting">
+        <div class="ui-spinner"></div>
         <p>Processing your booking...</p>
       </div>
     </div>
@@ -167,44 +167,8 @@ import { BookingService } from '../../../services/booking.service';
         gap: 12px;
       }
 
-      .btn-primary {
-        padding: 12px 32px;
-        background-color: #d4645c;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 14px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-
-        &:hover {
-          background-color: #c15048;
-        }
-      }
-
       .submitting {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         padding: 60px 24px;
-      }
-
-      .spinner {
-        width: 40px;
-        height: 40px;
-        border: 4px solid #e8ddd4;
-        border-top-color: #d4645c;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-        margin-bottom: 16px;
-      }
-
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
       }
 
       @media (max-width: 640px) {
@@ -216,7 +180,7 @@ import { BookingService } from '../../../services/booking.service';
           flex-direction: column;
         }
 
-        .btn-primary {
+        .ui-button {
           width: 100%;
         }
       }
